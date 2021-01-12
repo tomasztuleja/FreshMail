@@ -15,4 +15,6 @@ How to start:
   
 5. Use an existing account on FreshMail site or create one manually
 
-6. Run the test from IDE Tool (f.e. PyCharm
+6. Run the test from IDE Tool (f.e. PyCharm)
+
+7. reCaptcha does not make testing lighter, it might block you. If yes, run the test again.
