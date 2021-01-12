@@ -17,9 +17,9 @@ class RecipientsListTest(BaseTest):
         self.loginPage.enter_text(Locators.LOGIN, TestData.LOGIN)
         self.loginPage.enter_text(Locators.PASSWORD, TestData.PASSWORD)
         self.loginPage.click(Locators.SUBMIT)
-        self.homePage = HomePage(self.loginPage.driver)
 
         def after_potential_relog(page):
+            self.homePage.click(Locators.RECIPIENTS)
             self.recipientsPage = Recipients(self.homePage.driver)
             self.recipientsPage.click(Locators.ADD_LIST_BUTTON)
             self.recipientsPage.enter_text(Locators.LIST_CREATOR_NAME, "testowa")
@@ -34,7 +34,6 @@ class RecipientsListTest(BaseTest):
 
         except:
             self.homePage = HomePage(self.loginPage.driver)
-            self.homePage.click(Locators.RECIPIENTS)
             after_potential_relog(self.homePage.driver)
 
 
